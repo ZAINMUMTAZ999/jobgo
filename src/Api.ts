@@ -1,6 +1,6 @@
 import { registerUserTypes } from "./pages/Register";
 import { AddJobTypes } from "./pages/AddPage";
-import axios from "axios";
+// import axios from "axios";
 const Base_Url_API = "https://fascinating-hamster-38f55b.netlify.app/api";
 type loginUserTypes = {
   email: string;
@@ -110,34 +110,34 @@ const deleteJobApi = async (jobId: string) => {
 
 const AllUserFetching = async () => {
 
-try {
-  const resp = await axios.get(`${Base_Url_API}/userInfo`,{
-    withCredentials:true,
-    headers:{
-      Accept:"application/json"
-    }
+// try {
+//   const resp = await axios.get(`${Base_Url_API}/userInfo`,{
+//     withCredentials:true,
+//     headers:{
+//       Accept:"application/json"
+//     }
     
-  }
-);
-const data= resp.data;
-return data;
-} catch (error) {
-  console.log(error);
-  if(axios.isAxiosError(error)){
-    throw new Error("userInfo not found!")
-  } throw error
+//   }
+// );
+// const data= resp.data;
+// return data;
+// } catch (error) {
+//   console.log(error);
+//   if(axios.isAxiosError(error)){
+//     throw new Error("userInfo not found!")
+//   } throw error
   
-}
-  // const response = await fetch(`${Base_Url_API}/userInfo`, {
-  //   credentials: "include",
-  // });
+// }
+  const response = await fetch(`${Base_Url_API}/userInfo`, {
+    credentials: "include",
+  });
 
-  // if (!response.ok) {
-  //   throw new Error("JobApi not fetched");
-  // }
+  if (!response.ok) {
+    throw new Error("JobApi not fetched");
+  }
 
-  // const data = await response.json();
-  // return data || { user: null };
+  const data = await response.json();
+  return data || { user: null };
 };
 const JobFetching = async (): Promise<jobSearchResponse> => {
   const response = await fetch(`${Base_Url_API}/jobs`, {
