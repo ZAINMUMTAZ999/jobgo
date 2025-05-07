@@ -1,7 +1,7 @@
 import { registerUserTypes } from "./pages/Register";
 import { AddJobTypes } from "./pages/AddPage";
 import axios from "axios";
-const Base_Url_API = " https://fascinating-hamster-38f55b.netlify.app/api";
+const Base_Url_API = "https://fascinating-hamster-38f55b.netlify.app/api";
 type loginUserTypes = {
   email: string;
   password: string;
