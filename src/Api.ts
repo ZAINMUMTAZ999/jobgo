@@ -58,10 +58,7 @@ const validateToken = async () => {
 const LogoutApi = async () => {
   const response = await fetch(`${Base_Url_API}/logout`, {
     credentials: "include",
-    method: "POST",
-    headers: {
-      "Content-Type": "application/josn",
-    },
+    method: "POST"
   });
   if (!response.ok) {
     throw new Error("logout api not fetch");
