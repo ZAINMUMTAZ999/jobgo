@@ -56,8 +56,8 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex justify-center items-center w-full px-4 py-6">
-      <div className="bg-gray-300 p-6 rounded-lg w-full max-w-6xl">
+    <div className="flex justify-center items-center w-full px-4 mt-12 ">
+      <div className="bg-blue-500 p-6 rounded-lg w-full max-w-6xl">
         <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Job Title */}
           <div>

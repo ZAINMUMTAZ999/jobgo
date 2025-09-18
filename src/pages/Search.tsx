@@ -53,25 +53,36 @@ const Search = () => {
 
     
        
-      <div className="flex flex-col">
+      <div className="flex flex-col ">
       
-      <h1 className="sm:text-sm md:text-3xl font-extrabold  sm:tracking-normal md:tracking-widest mb-6 underline sm:ml-12 md:ml-80 ">Job Listings</h1>
-      <div className="text-sm">
+      {/* <div className="text-sm flex justify-between ">
+        
+        <h1 className="sm:text-sm md:text-3xl font-extrabold  sm:tracking-normal md:tracking-widest mb-6 underline sm:ml-12 md:ml-80 ">Job Listings</h1>
     {
-          searchData?.pagination.total ===0 ?   <span className="font-bold  flex justify-end mr-96">
+      searchData?.pagination.total ===0 ?   <span className="font-bold  flex justify-end mr-96">
           {searchData?.pagination?.total} jobs Found
-        </span>:
+        </span> :
      
-        <span className="font-bold  flex justify-end mr-96">
+     <span className="font-bold  flex justify-end mr-96">
           {searchData?.pagination?.total} jobs Found
         </span>
     
-        }
+  }
 
-    </div>
+    </div> */}
+    <div className="flex flex-col sm:flex-row items-center justify-between container  px-4 sm:px-12 md:px-20 gap-2    ">
+  <h1 className="text-2xl whitespace-nowrap  md:text-3xl font-extrabold tracking-wide mb-2  mx-72 sm:mb-0 underline">
+    Job Listings
+  </h1>
+
+  <span className="font-bold">
+    {searchData?.pagination?.total ?? 0} jobs found
+  </span>
+</div>
+
         {searchData?.data?.map((job) => (
           // Always provide a key when mapping components
-          <span className="-mt-12">
+          <span className="mt-4">
           
           <SearchDataPage key={job._id} job={job} />
           </span>
