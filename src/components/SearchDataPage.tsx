@@ -64,7 +64,7 @@ const SearchDataPage: React.FC<SearchDataPageProps> = ({ job }) => {
   return (
     <div className="max-w-7xl mx-auto p-4">
       
-      <h1 className="text-2xl font-bold mb-6">Job Listings</h1>
+      
    
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Left Side - Job List */}

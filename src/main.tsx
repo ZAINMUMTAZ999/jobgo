@@ -25,5 +25,5 @@ createRoot(document.getElementById('root')!).render(
 </SearchContextProvider>
       </AppNotifyProvider>
     </QueryClientProvider>
-  // </StrictMode>,
+   </StrictMode>,
 )

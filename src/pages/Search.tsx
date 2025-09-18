@@ -48,12 +48,14 @@ const Search = () => {
   }
 
   return (
-    <div className="ml-40">
+    <div className="">
       <SearchBar />
 
     
        
       <div className="flex flex-col">
+      
+      <h1 className="sm:text-sm md:text-3xl font-extrabold  sm:tracking-normal md:tracking-widest mb-6 underline sm:ml-12 md:ml-80 ">Job Listings</h1>
       <div className="text-sm">
     {
           searchData?.pagination.total ===0 ?   <span className="font-bold  flex justify-end mr-96">
