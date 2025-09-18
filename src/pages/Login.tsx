@@ -54,6 +54,7 @@ const Login = () => {
                 <label className="text-gray-700 text-sm font-bold flex-1">
                     Email:
                     <input type="email"
+                    defaultValue="mzainmumtaz99@gmail.com"
                         className="border rounded w-full py-1 px-2 font-normal" {...register("email", { required: "Email is required" })} />
                     {
                         errors.email && (<span className="text-sm text-red-300">{errors.email.message}</span>)
@@ -62,6 +63,7 @@ const Login = () => {
                 <label className="text-gray-700 text-sm font-bold flex-1">
                     Password:
                     <input type={passwordType}
+                    defaultValue="password"
 
                         className="border rounded w-full py-1 px-2 font-normal" {...register("password", {
                             minLength: {
