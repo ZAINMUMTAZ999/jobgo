@@ -343,7 +343,7 @@ const getFormattedDate = (job: AddJobTypes | null | undefined) => {
   const totalJobs = data?.dashboard?.length || 0;
 
   return (
-    <div className="container mx-auto px-4 py-6">
+  <div className="container mx-auto px-6  lg:px-24 py-6">
       {/* Dashboard Header */}
       <div className="mb-6">
         <h1 className="text-2xl font-bold text-gray-800 mb-2">Job Application Dashboard</h1>
