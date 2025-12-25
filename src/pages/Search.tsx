@@ -22,10 +22,10 @@ const Search = () => {
   };
   
   // Use an array query key with all dependencies to ensure proper caching
-  const queryKey = ["searchJobs", searchParams.jobTitle, searchParams.companysIndustry, 
-                   searchParams.jobLocation, 
-                   searchParams.sortOption, 
-                   searchParams.page];
+    const queryKey = ["searchJobs", searchParams.jobTitle, searchParams.companysIndustry, 
+                    searchParams.jobLocation, 
+                    searchParams.sortOption, 
+                    searchParams.page];
                    
   // Configure React Query with strict settings to prevent duplicate fetching
   const { data: searchData, isLoading } = useQuery(
