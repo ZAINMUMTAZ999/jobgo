@@ -3,7 +3,7 @@ import { AddJobTypes } from "./pages/AddPage";
 // import axios from "axios";
 
 // const Base_Url_API = "https://fascinating-hamster-38f55b.netlify.app/api";
-const Base_Url_API = "https://694d7752f2ba815e43e8216c--newbakkedknekdena.netlify.app/api";
+const Base_Url_API = "https://ubiquitous-douhua-6aced0.netlify.app/api"
 // const Base_Url_API = "http://localhost:8000/api";
 type loginUserTypes = {
   email: string;
